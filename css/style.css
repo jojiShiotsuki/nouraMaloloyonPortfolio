@@ -28,16 +28,36 @@
      background-image: url(../css/img/Intro.png);
      background-size: cover;
      background-position: center;
-     height: 1000px;
+     height: 920px;
 }
-.landingSecondSec{
-     display: flex;
-     justify-content: space-around;
-     padding-top: 20%;
+
+.aboutMeSection{
+     height: 920px;
+     background-image: url(../css/img/About\ Me.png);
+     background-size: cover;
+     background-position: center;
+     color: white;
+}
+.projectSection {
+     height: 920px;
+     background-image: url(../css/img/Projects.png);
+     background-size: cover;
+     background-position: center;
+}
+.contactMeSection{
+     height: 920px;
+     background-image: url(../css/img/Contact\ Me.png);
+     background-size: cover;
+     background-position: center;
+}
+.footerSection{
+     height: 600px;
+     background-color: gainsboro;
 }
 /******************************************
 /* LAYOUT
 /*******************************************/
+
 .navUL{
      display: flex;
      justify-content: space-between;
@@ -52,6 +72,47 @@
 .navLogo li, .navBtn li{
      margin-right: 20%;
 }
+.landingSecondSec{
+     display: flex;
+     justify-content: space-around;
+     padding-top: 20%;
+}
+.aboutMeSection{
+     text-align: center;
+}
+.aboutMeSection h1 {
+     margin: 0;
+     padding-top: 12%;
+}
+.aboutMeSection p{
+     padding : 5% 5% 0% 5%;
+}
+.projectSection{
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+.projectContainer{
+     width: 250px;
+     height: 500px;
+     background-color: peachpuff;
+     cursor: pointer;
+}
+.projectContainer:hover {
+     /* Set pointer-events to "auto" to allow clicks */
+     pointer-events: auto;
+ }
+ .projectContainer * {
+     /* Set pointer-events to "none" for child elements to allow clicks to pass through */
+     pointer-events: none;
+ }
+
+ .contactCard{
+     padding-top: 20%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -113,3 +174,25 @@
      width: 200px;
      text-align: center;
 }
+
+
+
+/******************************************
+/* FORM
+/*******************************************/
+
+form {
+     max-width: 400px;
+     margin: 0 auto;
+ }
+
+ label {
+     margin-bottom: 8px;
+ }
+
+ input, button {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 16px;
+     box-sizing: border-box;
+ }
