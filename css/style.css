@@ -1,0 +1,115 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+.navContainer{
+     background-color: white;
+}
+.landingSection{
+     background-image: url(../css/img/Intro.png);
+     background-size: cover;
+     background-position: center;
+     height: 1000px;
+}
+.landingSecondSec{
+     display: flex;
+     justify-content: space-around;
+     padding-top: 20%;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+.navUL{
+     display: flex;
+     justify-content: space-between;
+     margin: 0;
+}
+.navLogo,.navBtn{
+     display: flex;
+}
+.navBtn{
+     padding-right: 80px;
+}
+.navLogo li, .navBtn li{
+     margin-right: 20%;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.navUL li{
+     list-style: none;
+}
+
+.cardHolder{
+     position: relative;
+     width: 250px;
+     height: 350px;
+     perspective: 1000px;
+}
+.theCard{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     transform-style: preserve-3d;
+     transition: all 0.5s ease;
+}
+.cardHolder:hover .theCard{
+     transform: rotateY(180deg);
+}
+.frontCard{
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     backface-visibility: hidden;
+     background: gray;
+     color: black;
+}
+.backCard{
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     backface-visibility: hidden;
+     background: black;
+     color: white;
+     transform: rotateY(180deg);
+}
+
+
+
+/******************************************
+/* BUTTONS
+/*******************************************/
+
+.requestBtn{
+     display: inline-block;
+     padding: 10px 20px;
+     background-color: #3498db;
+     color: #ffffff;
+     text-decoration: none; /* Remove default underline */
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 16px;
+     width: 200px;
+     text-align: center;
+}
