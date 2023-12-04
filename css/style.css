@@ -23,6 +23,7 @@
 
 .navContainer{
      background-color: white;
+     height: 60px;
 }
 .landingSection{
      background-image: url(../css/img/Intro.png);
@@ -39,7 +40,7 @@
      color: white;
 }
 .projectSection {
-     height: 920px;
+     height: 750px;
      background-image: url(../css/img/Projects.png);
      background-size: cover;
      background-position: center;
@@ -57,20 +58,26 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
-
 .navUL{
      display: flex;
      justify-content: space-between;
      margin: 0;
+     height: 100%;
 }
 .navLogo,.navBtn{
      display: flex;
+     align-items: center;
+     text-decoration: none;
 }
 .navBtn{
      padding-right: 80px;
 }
+.logo{
+     width: 35px;
+}
 .navLogo li, .navBtn li{
      margin-right: 20%;
+     
 }
 .landingSecondSec{
      display: flex;
@@ -89,12 +96,13 @@
 }
 .projectSection{
      display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
      align-items: center;
-     justify-content: space-around;
 }
 .projectContainer{
-     width: 250px;
-     height: 500px;
+     width: 470px;
+     height: 300px;
      background-color: peachpuff;
      cursor: pointer;
 }
@@ -121,7 +129,10 @@
 .navUL li{
      list-style: none;
 }
-
+.line{
+     margin-right: 10px;
+     
+}
 .cardHolder{
      position: relative;
      width: 250px;
@@ -162,18 +173,109 @@
 /* BUTTONS
 /*******************************************/
 
-.requestBtn{
-     display: inline-block;
-     padding: 10px 20px;
-     background-color: #3498db;
-     color: #ffffff;
-     text-decoration: none; /* Remove default underline */
-     border-radius: 5px;
-     cursor: pointer;
-     font-size: 16px;
-     width: 200px;
-     text-align: center;
-}
+.requestBtn {
+     position: relative;
+     background: #444;
+     color: black;
+     text-decoration: none;
+     text-transform: uppercase;
+     border: none;
+     letter-spacing: 0.1rem;
+     font-size: 1rem;
+     padding: 0.6rem 1rem;
+     transition: 0.4s;
+     border-radius: 15px;
+     
+   }
+   
+   .requestBtn:hover {
+     letter-spacing: 0.2rem;
+     padding: 0.9rem 2.1rem;
+     background: var(--clr);
+     color: var(--clr);
+     /* box-shadow: 0 0 35px var(--clr); */
+     animation: box 3s infinite;
+     border-radius: 15px;
+   }
+   
+   .requestBtn.requestBtn::before {
+     content: "";
+     position: absolute;
+     inset: 2px;
+     background: white;
+     border-radius: 15px;
+   }
+   
+   .requestBtn .requestSpan {
+     position: relative;
+     z-index: 1;
+   }
+   .requestBtn i {
+     position: absolute;
+     inset: 0;
+     display: block;
+   }
+   
+   .requestBtn i::before {
+     content: "";
+     position: absolute;
+     width: 10px;
+     height: 2px;
+     left: 80%;
+     top: -2px;
+     border: 2px solid var(--clr);
+     background: #272822;
+     transition: 0.2s;
+   }
+   
+   .requestBtn:hover i::before {
+     width: 15px;
+     left: 20%;
+     animation: move 3s infinite;
+   }
+   
+   .requestBtn i::after {
+     content: "";
+     position: absolute;
+     width: 10px;
+     height: 2px;
+     left: 20%;
+     bottom: -2px;
+     border: 2px solid var(--clr);
+     background: #272822;
+     transition: 0.2s;
+   }
+   
+   .requestBtn:hover i::after {
+     width: 15px;
+     left: 80%;
+     animation: move 3s infinite;
+   }
+   
+   @keyframes move {
+     0% {
+       transform: translateX(0);
+     }
+     50% {
+       transform: translateX(5px);
+     }
+     100% {
+       transform: translateX(0);
+     }
+   }
+   
+   @keyframes box {
+     0% {
+       box-shadow: #27272c;
+     }
+     50% {
+       box-shadow: 0 0 25px var(--clr);
+     }
+     100% {
+       box-shadow: #27272c;
+     }
+   }
+   
 
 
 
@@ -190,7 +292,7 @@ form {
      margin-bottom: 8px;
  }
 
- input, button {
+ input, .formBtn {
      width: 100%;
      padding: 10px;
      margin-bottom: 16px;
