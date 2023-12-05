@@ -46,7 +46,7 @@
      background-position: center;
 }
 .contactMeSection{
-     height: 920px;
+     height: 1100px;
      background-image: url(../css/img/Contact\ Me.png);
      background-size: cover;
      background-position: center;
@@ -120,12 +120,40 @@
      /* Set pointer-events to "none" for child elements to allow clicks to pass through */
      pointer-events: none;
  }
-
- .contactCard{
-     padding-top: 20%;
+ .contactMeSection{
      display: flex;
      justify-content: center;
      align-items: center;
+ }
+ .contactCard{
+     border: 1px solid #06153B;
+     height: 600px;
+     width: 1300px;
+     border-radius: 20px;
+     margin-top: 6%;
+     display: flex;
+ }
+ .contactLeft{
+     background-color:#06153B;
+     color: white;
+     border-radius: 20px 0 0 20px;
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     
+ }
+ .contactRight{
+     background-color: white;
+     width: 50%;
+     border-radius: 0px 20px 20px 0px;
+ }
+ .contractLefth4{
+     padding : 40% 0 0 5%;
+     font-size: 1.2rem;
+ }
+ .contractLefth2{
+     text-align: center;
+     font-size: 2.5rem;
  }
 
 /******************************************
@@ -150,10 +178,10 @@
 }
 .theCard{
      position: absolute;
-     width: 100%;
+     width: 185%;
      height: 100%;
      transform-style: preserve-3d;
-     transition: all 0.5s ease;
+     transition: all 1s ease;
 }
 .cardHolder:hover .theCard{
      transform: rotateY(180deg);
@@ -161,7 +189,7 @@
 .frontCard{
      position: absolute;
      height: 75%;
-     width: 175%;
+     width: 100%;
      backface-visibility: hidden;
      background-image: url(../css/img/front.png);
      background-size: contain;
@@ -170,7 +198,7 @@
 .backCard{
      position: absolute;
      height: 75%;
-     width: 175%;
+     width: 100%;
      backface-visibility: hidden;
      background: black;
      color: white;
@@ -188,11 +216,20 @@
      color: #06153b;
      margin: 0px 0px 0px 0px;
 }
+.fontMontserrat{
+     font-family: 'Montserrat', sans-serif;
+}
 .designPassionDown{
      margin-bottom: 15px;
 }
 .designPassionUp{
      margin-top: 50px;
+}
+.aboutFontH1{
+     font-size: 2.5rem;
+}
+.aboutFontP{
+     font-size: 1.2rem;
 }
 /******************************************
 /* BUTTONS
@@ -221,6 +258,7 @@
      /* box-shadow: 0 0 35px var(--clr); */
      animation: box 3s infinite;
      border-radius: 15px;
+     cursor: pointer;
    }
    
    .requestBtn.requestBtn::before {
@@ -308,18 +346,34 @@
 /* FORM
 /*******************************************/
 
-form {
-     max-width: 400px;
-     margin: 0 auto;
- }
+.form-group {
+     position: relative;
+     margin-bottom: 40px;
+     margin-left: 5%;
+   }
 
- label {
-     margin-bottom: 8px;
- }
+   .form-group input {
+     width: 90%;
+     border: none;
+     border-bottom: 1px solid #000;
+     outline: none;
+     font-size: 1.1rem;
+     
+   }
 
- input, .formBtn {
-     width: 100%;
-     padding: 10px;
-     margin-bottom: 16px;
-     box-sizing: border-box;
- }
+   .form-group label {
+     position: absolute;
+     bottom: -20px;
+     left: 0;
+     color: #06153b6c;
+     font-size: 1.1rem;
+   }
+   .formBtn{
+     margin-left: 5%;
+   }
+.contactRight form{
+          margin-top: 10%;
+}
+.howHelpForm{
+     margin-top: 37%;
+}
