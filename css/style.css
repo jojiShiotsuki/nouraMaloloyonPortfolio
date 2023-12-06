@@ -33,7 +33,7 @@
 }
 
 .aboutMeSection{
-     height: 920px;
+     height: 1200px;
      background-image: url(../css/img/About\ Me.png);
      background-size: cover;
      background-position: center;
@@ -91,14 +91,17 @@
      padding-top: 9%;
 }
 .aboutMeSection{
-     text-align: center;
+     display: flex;
+     align-items: center;
 }
-.aboutMeSection h1 {
-     margin: 0;
-     padding-top: 12%;
+.aboutPicSec{
+     width: 50%;
+     display: flex;
+     justify-content: center;
+     padding: 0% 0% 0% 0%;
 }
-.aboutMeSection p{
-     padding : 5% 5% 0% 5%;
+.aboutContentSec{
+     width: 50%;
 }
 .projectSection{
      display: flex;
@@ -191,7 +194,7 @@
      height: 75%;
      width: 100%;
      backface-visibility: hidden;
-     background-image: url(../css/img/front.png);
+     background-image: url(../css/img/frontCard.png);
      background-size: contain;
      color: black;
 }
@@ -200,7 +203,8 @@
      height: 75%;
      width: 100%;
      backface-visibility: hidden;
-     background: black;
+     background-image: url(../css/img/backCard.png);
+     background-size: contain;
      color: white;
      transform: rotateY(180deg);
 }
@@ -226,10 +230,16 @@
      margin-top: 50px;
 }
 .aboutFontH1{
-     font-size: 2.5rem;
+     font-size: 3.5rem;
+     margin : 0% 0% 8% 15%;
 }
 .aboutFontP{
      font-size: 1.2rem;
+     line-height: 2rem;
+     margin-left: 15%;
+}
+.aboutPic{
+     width: 55%;
 }
 /******************************************
 /* BUTTONS
@@ -237,8 +247,8 @@
 
 .requestBtn {
      position: relative;
-     background: #444;
-     color: black;
+     background:#06153b;
+     color:#06153b;
      text-decoration: none;
      text-transform: uppercase;
      border: none;
@@ -265,7 +275,7 @@
      content: "";
      position: absolute;
      inset: 2px;
-     background: white;
+     background:#8bb9dc;
      border-radius: 15px;
    }
    
@@ -287,7 +297,7 @@
      left: 80%;
      top: -2px;
      border: 2px solid var(--clr);
-     background: #272822;
+     background:#06153b;
      transition: 0.2s;
    }
    
@@ -353,12 +363,19 @@
    }
 
    .form-group input {
-     width: 90%;
+     max-width: 90%;
+     width: 100%;
      border: none;
      border-bottom: 1px solid #000;
      outline: none;
      font-size: 1.1rem;
+     overflow-wrap: break-word;
      
+   }
+   .indent-text{
+     max-width: 90%;
+     width: 100%;
+     height: 200px;
    }
 
    .form-group label {
@@ -375,5 +392,5 @@
           margin-top: 10%;
 }
 .howHelpForm{
-     margin-top: 37%;
+     margin-top: 10%;
 }
